@@ -35,10 +35,12 @@ class SparkCommand extends Command
                 InputArgument::OPTIONAL,
                 'Your prime number'
             );
+
+        return 1; // method requires an integer return value
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
-	{
+    {
         $bitLength = $input->getOption('bits');
 
         $minBitLength = 4;
